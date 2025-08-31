@@ -12,32 +12,7 @@ interface Message {
 }
 
 const ChatInterface = () => {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: '1',
-      text: 'Hello! How can I help you with web scraping today?',
-      sender: 'ai',
-      timestamp: new Date(Date.now() - 600000)
-    },
-    {
-      id: '2',
-      text: 'hello',
-      sender: 'user',
-      timestamp: new Date(Date.now() - 300000)
-    },
-    {
-      id: '3',
-      text: 'how are you?',
-      sender: 'user',
-      timestamp: new Date(Date.now() - 60000)
-    },
-    {
-      id: '4',
-      text: 'I am functioning as expected. How can I assist you with web scraping today?',
-      sender: 'ai',
-      timestamp: new Date()
-    }
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   
   const [inputValue, setInputValue] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
