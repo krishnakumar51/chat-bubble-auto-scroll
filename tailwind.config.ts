@@ -52,6 +52,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				chat: {
+					background: 'hsl(var(--chat-background))',
+					'user-bubble': 'hsl(var(--chat-user-bubble))',
+					'user-text': 'hsl(var(--chat-user-text))',
+					'ai-bubble': 'hsl(var(--chat-ai-bubble))',
+					'ai-text': 'hsl(var(--chat-ai-text))',
+					'input-bg': 'hsl(var(--chat-input-bg))',
+					'send-button': 'hsl(var(--chat-send-button))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +93,41 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-up': {
+					from: {
+						transform: 'translateY(20px)',
+						opacity: '0'
+					},
+					to: {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'slide-up': 'slide-up 0.3s ease-out'
+			},
+			backgroundImage: {
+				'gradient-user': 'var(--gradient-user)',
+				'gradient-send': 'var(--gradient-send)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'elevated': 'var(--shadow-elevated)'
 			}
 		}
 	},
