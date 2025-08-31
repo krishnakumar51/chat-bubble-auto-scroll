@@ -96,7 +96,7 @@ const ChatInterface = () => {
       {/* Chat Messages Area */}
       <div 
         ref={chatContainerRef}
-        className="flex-1 overflow-y-auto px-4 py-6 space-y-6"
+        className="flex-1 overflow-y-auto px-4 py-6 space-y-6 max-w-4xl mx-auto w-full"
       >
         {messages.map((message, index) => (
           <div
@@ -125,7 +125,7 @@ const ChatInterface = () => {
             </Avatar>
 
             {/* Message Content */}
-            <div className={`flex flex-col max-w-[70%] ${
+            <div className={`flex flex-col max-w-[60%] ${
               message.sender === 'user' ? 'items-end' : 'items-start'
             }`}>
               {/* Sender Name & Title */}
